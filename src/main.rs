@@ -11,12 +11,12 @@ struct Launched;
 
 #[derive(Debug, Copy, Clone)]
 struct Rocket<State> {
-    id: i32,
+    id: u32,
     _marker: PhantomData<State>,
 }
 
 impl Rocket<Idle> {
-    pub fn new(id: i32) -> Self {
+    pub fn new(id: u32) -> Self {
         let _rocket = Self {
             id,
             _marker: PhantomData,
