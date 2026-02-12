@@ -24,24 +24,26 @@ ZRocketIdle zrocket_new(u32 id) {
     ZRocketIdle r = {
         .rr = raw_r,
     };
-    printf("[rocket_new] id: %d\n", r.rr.id);
     return r;
 }
 
 ZRocketArmed zrocket_arm(ZRocketIdle r) {
-    ZRocketArmed r_new = { .rr = r.rr };
-    printf("[rocket_arm] id: %d\n", r.rr.id);
+    ZRocketArmed r_new = {
+        .rr = r.rr,
+    };
     return r_new;
 }
 
 ZRocketLaunched zrocket_launch(ZRocketArmed r) {
-    ZRocketLaunched r_new = { .rr = r.rr };
-    printf("[rocket_launch] id: %d\n", r.rr.id);
+    ZRocketLaunched r_new = {
+        .rr = r.rr,
+    };
     return r_new;
 }
 
 ZRocketIdle zrocket_reset(ZRocketLaunched r) {
-    ZRocketIdle r_new = { .rr = r.rr };
-    printf("[rocket_reset] id: %d\n", r.rr.id);
+    ZRocketIdle r_new = {
+        .rr = r.rr,
+    };
     return r_new;
 }
